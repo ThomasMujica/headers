@@ -1,0 +1,67 @@
+body {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  color: white;
+}
+
+.headerSection {
+  align-items: center;
+  background-color: #468a89;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+}
+
+.menu {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #0f3939;
+  /* Con esta opacidad logramos ocultar el menu */
+  opacity: 0;
+  /* Esto permite que el cursor (manito) no se vea cuando pasamos por encima del menu oculto */
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.menu.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu a {
+  padding: 2rem;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.menu a:hover {
+  background-color: #468a89;
+  color: white;
+  font-weight: bold;
+}
+
+.menu-btn {
+  background-color: #468a89;
+  border: transparent;
+  cursor: pointer;
+}
+
+.none {
+  display: none;
+}
